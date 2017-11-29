@@ -1,0 +1,1 @@
+allDist <- apply(scale(tr_feat, center = as.numeric(dataPt), scale = F), 1, max)
