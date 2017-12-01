@@ -1,10 +1,6 @@
 # Prob2-KNN-DistWeightVoting.R: Perform KNN algorithm with distance weighted voting method
 # Perform KNN algorithm on k-fold cross-validation data sets, using distance weighted voting method
 
-# Read data sets from file
-folderPath <- "Data/KFold_KNN/"
-source("Prob1-ReadKFold.R")
-
 err_vec <- array(0, dim = numFold)
 
 for (foldNo in 1:numFold) {
@@ -20,7 +16,7 @@ for (foldNo in 1:numFold) {
     
     for (j in 1:numData_vld) {
         dataPt <- vld_feat[j,]
-        source("Prob2-KNN_Helper-CalcDist-1Norm.R")
+        source(KNN_Helper_CalcDist_FILE)
         
         cand_names <- names(allDist)[allDist <= allDist[numNeighbor]]
         uniqVal_cand <- unique(tr_resp[cand_names,])
@@ -42,6 +38,6 @@ for (foldNo in 1:numFold) {
 
 cat("With ", numNeighbor, " neighbors, average error = ", mean(err_vec), "\n", sep = "")
 
-rm(j, numData_vld, tr_feat, vld_feat, tr_resp, vld_resp, vld_pred, dataPt, allDist, cand_names, foldNo, folderPath)
+rm(j, numData_vld, tr_feat, vld_feat, tr_resp, vld_resp, vld_pred, dataPt, allDist, cand_names, foldNo)
 
 

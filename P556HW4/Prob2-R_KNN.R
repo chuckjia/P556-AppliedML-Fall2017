@@ -1,7 +1,4 @@
-# Wrapper of commands that execute the built-in KNN method in R
-
-folderPath <- "Data/KFold_KNN/"
-source("Prob1-ReadKFold.R")
+# Prob2-R_KNN.R: Perform KNN on cross validation files using the built-in KNN methods in R
 
 err_vec <- array(0, dim = numFold)
 

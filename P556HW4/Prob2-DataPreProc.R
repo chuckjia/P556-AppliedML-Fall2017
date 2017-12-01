@@ -1,6 +1,5 @@
 # Prob2-DataPreProc.R: Preprocess data in the 3 data sets
 
-
 rm(list = ls()); cat("\014")  # Clear screen
 
 # ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== 

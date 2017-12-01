@@ -1,9 +1,7 @@
 # Prob2-KNN-MajorVoting.R: Perform KNN algorithm with majority voting method
 # Perform KNN algorithm on k-fold cross-validation data sets, using majority voting method
-
-# Read data sets from file
-folderPath <- "Data/KFold_KNN/"
-source("Prob1-ReadKFold.R")
+# Input:: tr_feat_list, vld_feat_list, tr_resp_list, vld_resp_list
+#         data_set_name, numFold, KNN_Helper_CalcDist_FILE
 
 err_vec <- array(0, dim = numFold)
 
@@ -20,7 +18,7 @@ for (foldNo in 1:numFold) {
     
     for (j in 1:numData_vld) {
         dataPt <- vld_feat[j,]
-        source("Prob2-KNN_Helper-CalcDist-1Norm.R")
+        source(KNN_Helper_CalcDist_FILE)
         cand_names <- names(allDist)[allDist <= allDist[numNeighbor]]
         freqTable <- table(tr_resp[cand_names,])
         vld_pred[j,] <- names(freqTable)[which.max(freqTable)]
@@ -33,6 +31,6 @@ for (foldNo in 1:numFold) {
 cat("With ", numNeighbor, " neighbors, average error = ", mean(err_vec), "\n", sep = "")
 
 rm(j, numData_vld, tr_feat, vld_feat, tr_resp, vld_resp, vld_pred, dataPt, allDist, cand_names, 
-   foldNo, folderPath, freqTable)
+   foldNo, freqTable)
 
 

@@ -3,8 +3,8 @@
 
 title <- paste(toupper(data_set_name), " Set with ", dist_fcn_name, " Dist Function", sep = "")
 
-err_pts <- cbind(neighborRange, rowMeans(errAll_KNN))
-err_sd <- apply(errAll_KNN, 1, sd)
+err_pts <- cbind(neighborRange, colMeans(errAll_KNN))
+err_sd <- apply(errAll_KNN, 2, sd)
 
 if (is.null(yRange)) 
     yRange <- c(min(err_pts[,2] - 1.25 * err_sd), 
