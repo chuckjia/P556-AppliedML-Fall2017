@@ -5,7 +5,7 @@ plot(err_KNN,
      col = "steelblue2",
      ylim = yRange,
      main = title,
-     xlab = "Number of Neighbors",
+     xlab = "Validation Set Number",
      ylab = "Error")
 points(err_KNN, col = "steelblue2", pch = 19)
 lines(err_NBC, col = "orange", lwd = 2)

@@ -27,9 +27,9 @@ err_NBC_crx <- cbind(1:numFold, err_NBC_crx)
 
 cat("\014")
 
-title <- "Errors for Ionosphere Set"
-err_KNN <- err_KNN_iono_k1
-err_NBC <- err_NBC_iono
+title <- "Errors for Crx Set"
+err_KNN <- err_KNN_crx_k13
+err_NBC <- err_NBC_crx
 yRange <- c(0, 0.25)
 source("Prob4-Plot_Helper.R")
 
