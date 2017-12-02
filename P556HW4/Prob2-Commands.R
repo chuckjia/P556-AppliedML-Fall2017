@@ -100,7 +100,7 @@ colMeans(errAll_KNN)
 apply(errAll_KNN, 2, sd)
 
 # ----- ----- ----- ----- ----- ----- 
-# Crx set: Preliminary analysis
+# Crx set
 # ----- ----- ----- ----- ----- ----- 
 
 data_set_name <- "crx" 

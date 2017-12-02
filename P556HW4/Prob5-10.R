@@ -20,3 +20,9 @@ TN <- vld_pred == "Down" & vld_resp == "Down"
 numTN <- sum(TN)
 FN <- vld_pred == "Down" & vld_resp == "Up"
 numFN <- sum(FN)
+
+# Method from textbook p. 160
+true_resp <- vld_resp[,1]
+table(vld_pred, true_resp)
+mean(vld_pred == true_resp)
+53/104

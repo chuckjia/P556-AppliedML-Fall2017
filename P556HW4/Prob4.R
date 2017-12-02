@@ -25,28 +25,13 @@ err_NBC_iono <- cbind(1:numFold, err_NBC_iono)
 err_NBC_car <- cbind(1:numFold, err_NBC_car)
 err_NBC_crx <- cbind(1:numFold, err_NBC_crx)
 
+cat("\014")
+
 title <- "Errors for Ionosphere Set"
 err_KNN <- err_KNN_iono_k1
 err_NBC <- err_NBC_iono
 yRange <- c(0, 0.25)
-
-par(fg = "black") 
-plot(err_KNN,
-     type = "l",
-     lwd = 2, 
-     col = "steelblue2",
-     ylim = yRange,
-     main = title,
-     xlab = "Number of Neighbors",
-     ylab = "Error")
-points(err_KNN, col = "steelblue2", pch = 19)
-lines(err_NBC, col = "orange", lwd = 2)
-points(err_NBC, col = "orange", pch = 19)
-legend(1, yRange[2],
-       c("KNN", "Naive Bayes"),
-       lty = c(1, 1),
-       lwd = c(2, 2),
-       col = c("steelblue2", "orange"))
+source("Prob4-Plot_Helper.R")
 
 # ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== 
 # Boxplots
