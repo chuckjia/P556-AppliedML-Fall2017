@@ -1,0 +1,2 @@
+Time used
+  - Total User =  39.441 System CPU =  1.243 Elapsed =  40.493

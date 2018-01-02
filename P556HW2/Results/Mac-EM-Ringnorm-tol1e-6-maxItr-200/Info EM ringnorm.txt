@@ -1,0 +1,11 @@
+Data Generated: 2017-10-05 01:29
+
+Machine: MacBook Pro
+Data Set: Ringnorm
+Method: EM (No Perturbation, No Fixed Parameters)
+Random Seed: Fixed Seeds, Not Random
+
+MaxItr = 200
+Tol = 1e-6
+Time used
+  - Total User =  5897.868 System CPU =  373.003 Elapsed =  6267.689

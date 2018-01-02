@@ -1,0 +1,11 @@
+Data Generated: 2017-10-05 18:41
+
+Machine: MacBook Pro
+Data Set: Ringnorm
+Method: k-means 
+Random Seed: Fixed Seeds, Not Random
+
+MaxItr = 200
+Tol = 1e-5
+Time used
+  - Total User =  4065.241 System CPU =  59.326 Elapsed =  4124.269

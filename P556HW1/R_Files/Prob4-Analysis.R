@@ -1,0 +1,20 @@
+# Generate plot for average error rates in one cluster: Ringnorm data set
+load("/Users/chuckjia/Desktop/P556 - HW1/R Files/ringTotalErr.Rdata")
+aveMat = c(mean(totalErrorMat[1, ]), mean(totalErrorMat[2, ]), mean(totalErrorMat[ , 3]), mean(totalErrorMat[ , 4]))
+for (i in 1:4)
+    aveMat[i] = aveMat[i] / (i + 1)
+augMat = c(2, 3, 4, 5)
+aveMat = rbind(augMat, aveMat)
+aveMat = t(aveMat)
+plot(1, type="n", main = "Average Error Rates", xlab="Number of Clusters (k)", ylab="Total Error Rates", xlim=c(2, 5), ylim=c(0, 0.35))
+points(aveMat, col = "darkgreen", pch = 21)
+
+# Generate plot for average error rates in one cluster: Ionosphere data set
+load("/Users/chuckjia/Desktop/P556 - HW1/R Files/ionoTotalErr.Rdata")
+aveMat = c(mean(totalErrorMat[1, ]), mean(totalErrorMat[2, ]), mean(totalErrorMat[ , 3]), mean(totalErrorMat[ , 4]))
+for (i in 1:4)
+    aveMat[i] = aveMat[i] / (i + 1)
+augMat = c(2, 3, 4, 5)
+aveMat = rbind(augMat, aveMat)
+aveMat = t(aveMat)
+points(aveMat, col = "orange", pch = 21)
